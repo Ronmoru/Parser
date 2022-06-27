@@ -27,10 +27,7 @@ namespace Parser
             {
                 HttpWebResponse response = (HttpWebResponse)_request.GetResponse();
                 var stream = response.GetResponseStream();
-                if (stream != null)
-                {
-                    Response = new StreamReader(stream).ReadToEnd();
-                }
+                Response = new StreamReader(stream).ReadToEnd();
             }
             catch(Exception)
             {
